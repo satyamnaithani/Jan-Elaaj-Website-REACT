@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "431207293dcee59ae88b",
+    "revision": "be731e08138cff5b841c",
     "url": "/Jan-Elaaj-Website-REACT/static/css/main.7451fa59.chunk.css"
   },
   {
-    "revision": "431207293dcee59ae88b",
-    "url": "/Jan-Elaaj-Website-REACT/static/js/main.4b6bf802.chunk.js"
+    "revision": "be731e08138cff5b841c",
+    "url": "/Jan-Elaaj-Website-REACT/static/js/main.40171795.chunk.js"
   },
   {
     "revision": "8f357b2b65b98200a713",
     "url": "/Jan-Elaaj-Website-REACT/static/js/runtime~main.a957ae22.js"
   },
   {
-    "revision": "bc097abc07d4f173bcf8",
+    "revision": "4e2ed5b74670f3c47aa3",
     "url": "/Jan-Elaaj-Website-REACT/static/css/2.9d350601.chunk.css"
   },
   {
-    "revision": "bc097abc07d4f173bcf8",
-    "url": "/Jan-Elaaj-Website-REACT/static/js/2.72d33eca.chunk.js"
+    "revision": "4e2ed5b74670f3c47aa3",
+    "url": "/Jan-Elaaj-Website-REACT/static/js/2.3a022895.chunk.js"
   },
   {
     "revision": "87df18c25980991ac59d0a79fbf0ccf5",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/mobile.46807fe6.png"
   },
   {
-    "revision": "556d412efaccf404b1fad0d78e4271f3",
+    "revision": "17d22d74c4da899e3a5e569c11d35f98",
     "url": "/Jan-Elaaj-Website-REACT/index.html"
   }
 ];
