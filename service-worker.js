@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Jan-Elaaj-Website-REACT/precache-manifest.f1c7b9d87d6b17a406da92a771dd229f.js"
+  "/Jan-Elaaj-Website-REACT/precache-manifest.c0668ab02c0e0a3ede1a2830bfff3b76.js"
 );
 
 workbox.clientsClaim();
