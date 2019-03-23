@@ -1,21 +1,47 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardImgOverlay, Carousel, CarouselItem, CarouselIndicators} from 'reactstrap';
 import { aboutStyles as styles } from "../assets/styles/aboutStyles";
+import about from "../assets/images/about.png";
+import carousel1 from "../assets/images/carousel1.jpeg";
+import carousel2 from "../assets/images/carousel2.jpeg";
+import carousel3 from "../assets/images/carousel3.jpeg";
+import carousel4 from "../assets/images/carousel4.jpeg";
+
+// let c1 = {carousel1};
+// let c2 = {carousel2};
+// let c3 = {carousel3};
+// let c4 = {carousel4};
+
+// const items = [
+// 	{
+// 		src: c1
+// 	},
+// 	{
+// 		src: c2
+// 	},
+// 	{
+// 		src: c3
+// 	},
+// 	{
+// 		src: c4
+// 	}
+// ];
 
 const items = [
 	{
-		src: process.env.PUBLIC_URL + 'images/carousel1.jpeg'
+		src: carousel1
 	},
 	{
-		src: process.env.PUBLIC_URL + 'images/carousel2.jpeg'
+		src: carousel2
 	},
 	{
-		src: process.env.PUBLIC_URL + 'images/carousel3.jpeg'
+		src: carousel3
 	},
 	{
-		src: process.env.PUBLIC_URL + 'images/carousel4.jpeg'
+		src: carousel4
 	}
 ];
+
 
 class About extends Component {
 
@@ -68,7 +94,7 @@ class About extends Component {
 		return (
 			<div>
 				<Card>
-					<CardImg width="100%" src={process.env.PUBLIC_URL + '/images/about.png'} />
+					<CardImg width="100%" src={about} />
 					<CardImgOverlay style={{ backgroundColor: 'rgba(50, 105, 193, 0.7'}}>
 						<div className="d-flex flex-row flex-wrap justify-content-around align-items-center">
 							<div style={{ maxWidth: 600, marginTop: 70 }}>

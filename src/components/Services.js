@@ -1,6 +1,14 @@
 import React, {Component} from 'react';
 import { Card, CardImg, CardTitle, CardBody, CardSubtitle, CardText, CardImgOverlay } from 'reactstrap';
 import { styles } from '../assets/styles/servicesStyles';
+import doc2 from '../assets/images/doc2.jpg';
+import pharmacies from '../assets/images/pharmacies.jpg';
+import radio from '../assets/images/radio.jpg';
+import one from '../assets/images/1.png';
+import two from '../assets/images/2.png';
+import three from '../assets/images/3.png';
+import four from '../assets/images/4.png';
+import woman from '../assets/images/woman.png';
 
 
 const RenderServiceItem = ({service}) => {
@@ -22,43 +30,43 @@ const srvices = [
     {
         id: 0,
         title: 'Doctors',
-        image: process.env.PUBLIC_URL + '/images/doc2.jpg'
+        image: doc2
     },
     {
         id: 1,
         title: 'Pharmacy & Clinics',
-        image: process.env.PUBLIC_URL + '/images/pharmacies.jpg'
+        image: pharmacies
     },
     {
         id: 2,
         title: 'Pathology and Radiology',
-        image: process.env.PUBLIC_URL + '/images/radio.jpg'
+        image: radio
     }
 ]
 
 const featurs = [
     {
 		id: 0,
-		logo: process.env.PUBLIC_URL + '/images/1.png',
+		logo: one,
         feature: 'Affordability',
         description: 'Discounted healthcare services for all in their neighbourhood at Jan Elaaj Clinics'
     },
     {
 		id: 1,
-		logo: process.env.PUBLIC_URL + '/images/2.png',
+		logo: two,
         feature: 'Standardization',
         description: 'All clinics offer similiar services and all of the doctors and our partners are verified professionals'
     },
     {
         id: 2,
 		feature: 'Convenience',
-		logo: process.env.PUBLIC_URL + '/images/3.png',
+		logo: three,
         description: 'You can find a Jan Elaaj Clinc and other services near you through our website as well as mobile application'
     },
     {
         id: 3,
 		feature: 'Digitization',
-		logo: process.env.PUBLIC_URL + '/images/4.png',
+		logo: four,
         description: 'Patients can access their medical records any time and from anywhere with the help of a biometric touch based application'
     },
 ];
@@ -78,7 +86,7 @@ render(){
 	const RenderFeatures = () => {
 		return (
 			<Card style={{ borderWidth: 0, marginTop: 50 }}>
-				<CardImg width="100%" src={process.env.PUBLIC_URL + '/images/woman.png'}/>
+				<CardImg width="100%" src={woman}/>
 				<CardImgOverlay className="d-none d-xl-inline-block">
 					<div className="d-flex flex-row flex-wrap justify-content-between ml-5">
 						{features}
@@ -98,7 +106,7 @@ render(){
 	const features = featurs.map((feature) => {
 		return (
 			<div key={feature.id} className="flex-fill flex-grow-1 flex-shrink-1 col-md-5 m-md-5" style={{ maxWidth: 400 }}>
-				<CardTitle style={styles.title} className="heading mt-md-5"><img src={process.env.PUBLIC_URL + feature.logo} width='50.4px' height='36px' alt='logo' /> {feature.feature} </CardTitle>
+				<CardTitle style={styles.title} className="heading mt-md-5"><img src={feature.logo} width='100.8px' height='72px' alt='logo' /> {feature.feature} </CardTitle>
 				<CardText style={styles.description} className="normal mb-5"> {feature.description} </CardText>
 			</div>
 		);

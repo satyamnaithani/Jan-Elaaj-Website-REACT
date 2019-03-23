@@ -32,7 +32,7 @@ export const homeStyles = {
 			fontWeight: 'bold',
 			backgroundColor: '#25a8e3',
 			borderWidth: 0,
-		    transform: `translate(${-600}px, ${0}px)` 
+		    transform: `translate(${300}px, ${0}px)` 
 			
 		},
 		buttonSmall: {

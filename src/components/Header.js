@@ -10,7 +10,9 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+	DropdownItem } from 'reactstrap';
+	
+	import logo from '../assets/images/logo.png';
  
 
 export default class Header extends Component {
@@ -54,7 +56,7 @@ export default class Header extends Component {
     return (
      
         <Navbar color="light" light expand="md" sticky={'top'} style={{ minHeight: 70 }}>
-          <NavbarBrand href="/" className="ml-5"><img src='images/logo.png' height="57.6px" width="134.4px" alt="Jan-Elaaj-Logo"/></NavbarBrand>
+          <NavbarBrand href="/" className="ml-5"><img src={logo} height="57.6px" width="134.4px" alt="Jan-Elaaj-Logo"/></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto mr-4" navbar>
@@ -110,5 +112,6 @@ const loginButton = {
 	paddingRight: 22,
 	color: 'white',
 	fontSize: 15,
-	fontWeight: 'bold'
+	fontWeight: 'bold',
+	cursor: 'pointer'
 };
