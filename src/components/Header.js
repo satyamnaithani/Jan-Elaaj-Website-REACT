@@ -6,11 +6,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-	DropdownItem } from 'reactstrap';
+  NavLink
+  // UncontrolledDropdown,
+  // DropdownToggle,
+  // DropdownMenu,
+	// DropdownItem
+ } from 'reactstrap';
 	
 	import logo from '../assets/images/logo.png';
  
@@ -72,7 +73,7 @@ export default class Header extends Component {
                 <NavLink href="#about" className="nav-link" style={{marginLeft: 15,
 	marginRight: 15}} >About</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
+              {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret style={navItem}>
                   For Providers
                 </DropdownToggle>
@@ -92,7 +93,7 @@ export default class Header extends Component {
 							<NavLink to="/components/" className="nav-link" style={navItem}>
 								Signup
 							</NavLink>
-						</NavItem>
+						</NavItem> */}
             </Nav>
           </Collapse>
         </Navbar>
@@ -100,18 +101,18 @@ export default class Header extends Component {
     );
   }
 }
-const navItem = {
-	marginLeft: 15,
-	marginRight: 15
-};
+// const navItem = {
+// 	marginLeft: 15,
+// 	marginRight: 15
+// };
 
-const loginButton = {
-	backgroundColor: '#25a8e3',
-	borderRadius: 20,
-	paddingLeft: 22,
-	paddingRight: 22,
-	color: 'white',
-	fontSize: 15,
-	fontWeight: 'bold',
-	cursor: 'pointer'
-};
+// const loginButton = {
+// 	backgroundColor: '#25a8e3',
+// 	borderRadius: 20,
+// 	paddingLeft: 22,
+// 	paddingRight: 22,
+// 	color: 'white',
+// 	fontSize: 15,
+// 	fontWeight: 'bold',
+// 	cursor: 'pointer'
+// };

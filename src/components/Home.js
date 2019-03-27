@@ -18,7 +18,19 @@ const MainScreen = () => {
 					' healthcare services. Explore our services like second opinion,' +
 					' onspot vital tests and one click tracking on mobile app'}
 				</CardText>
-				<Button style={styles.card1.button}> EXPLORE </Button>
+				<CardText style={styles.card1.text}>
+					{'Jan Elaaj is incubated @ IIM Lucknow Noida Campus'}
+				</CardText>
+
+				<CardText style={styles.card1.text}>
+					{'Address: B-1, Institutional Area, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh '+
+				   'Phone No: 011-41025512'}
+				</CardText>
+
+				<CardText style={styles.card1.text}>
+					{'Email Us @ enquiry@janelaaj.clinic'}
+				</CardText>
+				{/* <Button style={styles.card1.button}> EXPLORE </Button> */}
 			</CardImgOverlay>
 		</Card>
 		</div>

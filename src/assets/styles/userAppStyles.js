@@ -3,9 +3,9 @@ export const UserAppStyles = {
 		maxWidth: 500
 	},
 	heading: {
-		
+		fontSize: 30,
 		color: "#646464",
-		
+		fontWeight: 700,
 		marginBottom: 30,
 		marginTop: 70
 	},
