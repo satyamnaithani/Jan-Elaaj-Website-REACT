@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "ea06c9197d0c9a65d094",
-    "url": "/Jan-Elaaj-Website-REACT/static/css/main.7451fa59.chunk.css"
+    "revision": "bde66512b5adfb587eb79e285a3f6373",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/doc2.bde66512.jpg"
   },
   {
-    "revision": "ea06c9197d0c9a65d094",
-    "url": "/Jan-Elaaj-Website-REACT/static/js/main.4ea41dc3.chunk.js"
+    "revision": "325f65aaaa39434250a0",
+    "url": "/Jan-Elaaj-Website-REACT/static/css/main.6e27dc7c.chunk.css"
   },
   {
     "revision": "8f357b2b65b98200a713",
     "url": "/Jan-Elaaj-Website-REACT/static/js/runtime~main.a957ae22.js"
   },
   {
-    "revision": "aa7c2a8084b3c92c5842",
-    "url": "/Jan-Elaaj-Website-REACT/static/css/2.9d350601.chunk.css"
+    "revision": "f06a0186aac7d948f53e16ee3ff5dfd7",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/logo.f06a0186.png"
   },
   {
-    "revision": "aa7c2a8084b3c92c5842",
-    "url": "/Jan-Elaaj-Website-REACT/static/js/2.ffc0d0fb.chunk.js"
+    "revision": "560a5d5418b7de4454fa",
+    "url": "/Jan-Elaaj-Website-REACT/static/js/2.86f4f3e7.chunk.js"
   },
   {
     "revision": "87df18c25980991ac59d0a79fbf0ccf5",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/carousel4.8578cdf8.jpeg"
   },
   {
-    "revision": "bde66512b5adfb587eb79e285a3f6373",
-    "url": "/Jan-Elaaj-Website-REACT/static/media/doc2.bde66512.jpg"
+    "revision": "325f65aaaa39434250a0",
+    "url": "/Jan-Elaaj-Website-REACT/static/js/main.9bc9c4f1.chunk.js"
   },
   {
     "revision": "d373cc3e6d574d5c7775d707aa116512",
@@ -80,11 +80,11 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/mobile.46807fe6.png"
   },
   {
-    "revision": "f06a0186aac7d948f53e16ee3ff5dfd7",
-    "url": "/Jan-Elaaj-Website-REACT/static/media/logo.f06a0186.png"
+    "revision": "560a5d5418b7de4454fa",
+    "url": "/Jan-Elaaj-Website-REACT/static/css/2.b7fd2155.chunk.css"
   },
   {
-    "revision": "1f15adaf39d1aa441b0df9dd536c2c11",
+    "revision": "04c961a0e146f12db02cbd170fd170cb",
     "url": "/Jan-Elaaj-Website-REACT/index.html"
   }
 ];
