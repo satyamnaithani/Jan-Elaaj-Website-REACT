@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardImgOverlay, Carousel, CarouselItem, CarouselIndicators } from 'reactstrap';
+import MediaQuery from 'react-responsive';
 import { aboutStyles as styles } from "../assets/styles/aboutStyles";
 import about from "../assets/images/about.png";
 import carousel1 from "../assets/images/carousel1.jpeg";
@@ -73,38 +74,75 @@ class About extends Component {
 
 		return (
 			<div>
-				<Card height="100%" width="100%">
-					<CardImg width="100%" src={about} />
-					<CardImgOverlay style={{ backgroundColor: 'rgba(50, 105, 193, 0.7' }}>
-						<div className="d-flex flex-row flex-wrap justify-content-around align-items-center">
-							<div style={{ minWidth: 600, maxWidth: 600, marginTop: 70 }}>
-								<Carousel activeIndex={activeIndex} next={this.next} previous={this.previous}>
-									<CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-									{slides}
-								</Carousel>
-							</div>
-							<div className="md-6" style={styles.container}>
-								<h3 className="heading" style={styles.heading}> About </h3>
-								<p className="normal" style={styles.text}>
-									Jan Elaaj brings an affordable trusted primary healthcare solution to your neighbourhood or at
-									your doorstep. Focused group discussions between various healthcare stakeholders and across
-									neighbourhoods helped design an optimal solution.
+				<MediaQuery query="(min-device-width: 1224px)">
+					<Card height="100%" width="100%">
+						<CardImg width="100%" src={about} />
+						<CardImgOverlay style={{ backgroundColor: 'rgba(50, 105, 193, 0.7' }}>
+							<div className="d-flex flex-row flex-wrap justify-content-around align-items-center">
+								<div style={{ minWidth: 600, maxWidth: 600, marginTop: 70 }}>
+									<Carousel activeIndex={activeIndex} next={this.next} previous={this.previous}>
+										<CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+										{slides}
+									</Carousel>
+								</div>
+								<div className="md-6" style={styles.container}>
+									<h3 className="heading" style={styles.heading}> About </h3>
+									<p className="normal" style={styles.text}>
+										Jan Elaaj brings an affordable trusted primary healthcare solution to your neighbourhood or at
+										your doorstep. Focused group discussions between various healthcare stakeholders and across
+										neighbourhoods helped design an optimal solution.
 								</p>
 
-								<h4 className="heading" style={{ ...styles.heading2, ...styles.text }}> Advisory Group: </h4>
-								<CardText style={{ ...styles.text, ...styles.headText }}> Dr. M K Bhan: Padma Bhusan, Former Secretary DBT </CardText>
-								<CardText style={{ ...styles.text, ...styles.headText }}> Prof D Prabhakaran: PHFI </CardText>
+									<h4 className="heading" style={{ ...styles.heading2, ...styles.text }}> Advisory Group: </h4>
+									<CardText style={{ ...styles.text, ...styles.headText }}> Dr. M K Bhan: Padma Bhusan, Former Secretary DBT </CardText>
+									<CardText style={{ ...styles.text, ...styles.headText }}> Prof D Prabhakaran: PHFI </CardText>
 
-								<h4 className="heading" style={{ ...styles.heading2, ...styles.text }}> Co-Founders: </h4>
-								<CardText style={{ ...styles.text, ...styles.headText }}> Asif Khair: Hewlett Packard, Ericsson </CardText>
-								<CardText style={{ ...styles.text, ...styles.headText }}> Sanjay Rajak: Ericsson </CardText>
+									<h4 className="heading" style={{ ...styles.heading2, ...styles.text }}> Co-Founders: </h4>
+									<CardText style={{ ...styles.text, ...styles.headText }}> Asif Khair: Hewlett Packard, Ericsson </CardText>
+									<CardText style={{ ...styles.text, ...styles.headText }}> Sanjay Rajak: Ericsson </CardText>
 
-								<h4 className="heading" style={{ ...styles.heading2, ...styles.text }}> Incubation: </h4>
-								<CardText style={{ ...styles.text, ...styles.headText }}> L-incubator, IIM Lucknow, Noida Campus </CardText>
+									<h4 className="heading" style={{ ...styles.heading2, ...styles.text }}> Incubation: </h4>
+									<CardText style={{ ...styles.text, ...styles.headText }}> L-incubator, IIM Lucknow, Noida Campus </CardText>
+								</div>
 							</div>
-						</div>
-					</CardImgOverlay>
-				</Card>
+						</CardImgOverlay>
+					</Card>
+				</MediaQuery>
+				<MediaQuery query="(min-resolution: 2dppx)">
+				<Card height="100%" width="100%">
+				<CardImg width="100%" height="1100" />
+						<CardImgOverlay style={{ backgroundColor: 'rgba(50, 105, 193, 0.7' }}>
+							<div className="d-flex flex-row flex-wrap justify-content-around align-items-center">
+								<div style={{ minWidth: '100%', maxWidth: '100%', marginTop: 70 }}>
+								<h3 className="heading" style={styles.responsive_heading}> About </h3>
+									<Carousel activeIndex={activeIndex} next={this.next} previous={this.previous}>
+										<CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+										{slides}
+									</Carousel>
+								</div>
+								<div className="md-6" style={styles.container}>
+									<br/>
+									<p className="normal" style={styles.text}>
+										Jan Elaaj brings an affordable trusted primary healthcare solution to your neighbourhood or at
+										your doorstep. Focused group discussions between various healthcare stakeholders and across
+										neighbourhoods helped design an optimal solution.
+								</p>
+
+									<h4 className="heading" style={{ ...styles.heading2, ...styles.text }}> Advisory Group: </h4>
+									<CardText style={{ ...styles.text, ...styles.headText }}> Dr. M K Bhan: Padma Bhusan, Former Secretary DBT </CardText>
+									<CardText style={{ ...styles.text, ...styles.headText }}> Prof D Prabhakaran: PHFI </CardText>
+
+									<h4 className="heading" style={{ ...styles.heading2, ...styles.text }}> Co-Founders: </h4>
+									<CardText style={{ ...styles.text, ...styles.headText }}> Asif Khair: Hewlett Packard, Ericsson </CardText>
+									<CardText style={{ ...styles.text, ...styles.headText }}> Sanjay Rajak: Ericsson </CardText>
+
+									<h4 className="heading" style={{ ...styles.heading2, ...styles.text }}> Incubation: </h4>
+									<CardText style={{ ...styles.text, ...styles.headText }}> L-incubator, IIM Lucknow, Noida Campus </CardText>
+								</div>
+							</div>
+						</CardImgOverlay>
+					</Card>
+				</MediaQuery>
 			</div>
 		);
 	}

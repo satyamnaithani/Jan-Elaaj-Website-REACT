@@ -9,6 +9,7 @@
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-responsive": "^6.1.1",
     "react-scripts": "2.1.8",
     "react-scrollable-anchor": "^0.6.1",
     "reactstrap": "^7.1.0"

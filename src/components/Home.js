@@ -8,7 +8,7 @@ const MainScreen = () => {
 	return (
 		<div>
 		<Card>
-			<CardImg width="100%" src={doc} alt={"Doctor Image"}/>
+			<CardImg width="100%" height="100%" src={doc} alt={"Doctor Image"}/>
 			<CardImgOverlay className="d-none d-xl-inline-block">
 				<CardTitle style={styles.card1.title} className="heading">
 					{'Your Affordable Neighbourhood Healthcare Provider'}

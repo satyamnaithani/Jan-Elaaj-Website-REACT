@@ -8,6 +8,11 @@ export const aboutStyles = {
 		marginBottom: 30,
 		marginTop: 70
 	},
+	responsive_heading: {
+		color: 'white',
+		textAlign: 'center',
+		marginBottom: 30
+	},
 	text: {
 		fontFamily: 'Nunito',
 		color: 'white'
