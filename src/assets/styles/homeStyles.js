@@ -72,5 +72,21 @@ export const homeStyles = {
 			marginLeft: -14,
 			marginRight: -18,
 		}
+	},
+	card3: {
+		title: {
+			width: '100%',
+			 margin: 20,
+			textAlign: 'center',
+			marginBottom: 20,
+			fontSize: '20px',
+			
+		},
+		text: {
+			width: '100%',
+			textAlign: 'center',
+			// marginLeft: 20,
+			fontSize: 15,
+		}
 	}
 };

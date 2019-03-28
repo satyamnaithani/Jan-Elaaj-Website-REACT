@@ -7,6 +7,12 @@ import carousel1 from "../assets/images/carousel1.jpeg";
 import carousel2 from "../assets/images/carousel2.jpeg";
 import carousel3 from "../assets/images/carousel3.jpeg";
 import carousel4 from "../assets/images/carousel4.jpeg";
+import carousel5 from "../assets/images/carousel5.jpeg";
+import carousel6 from "../assets/images/carousel6.jpeg";
+import carousel7 from "../assets/images/carousel7.jpeg";
+import carousel8 from "../assets/images/carousel8.jpeg";
+import carousel9 from "../assets/images/carousel9.jpeg";
+import carousel10 from "../assets/images/carousel10.jpeg";
 
 const items = [
 	{
@@ -20,9 +26,26 @@ const items = [
 	},
 	{
 		src: carousel4
+	},
+	{
+		src: carousel5
+	},
+	{
+		src: carousel6
+	},
+	{
+		src: carousel7
+	},
+	{
+		src: carousel8
+	},
+	{
+		src: carousel9
+	},
+	{
+		src: carousel10
 	}
 ];
-
 
 class About extends Component {
 
