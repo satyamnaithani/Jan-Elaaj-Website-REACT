@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/doc2.bde66512.jpg"
   },
   {
-    "revision": "101cd11219c2fe0ff30b",
+    "revision": "d28663d6ee0c34b586c8",
     "url": "/Jan-Elaaj-Website-REACT/static/css/main.6e27dc7c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/logo.f06a0186.png"
   },
   {
-    "revision": "37e08f3bc912aeaa927a",
-    "url": "/Jan-Elaaj-Website-REACT/static/js/2.f5bc75ff.chunk.js"
+    "revision": "0d8f784b131aac7e4df7",
+    "url": "/Jan-Elaaj-Website-REACT/static/js/2.dcf1a054.chunk.js"
   },
   {
     "revision": "87df18c25980991ac59d0a79fbf0ccf5",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/carousel4.8578cdf8.jpeg"
   },
   {
-    "revision": "101cd11219c2fe0ff30b",
-    "url": "/Jan-Elaaj-Website-REACT/static/js/main.82f639a2.chunk.js"
+    "revision": "d28663d6ee0c34b586c8",
+    "url": "/Jan-Elaaj-Website-REACT/static/js/main.ef3c8f65.chunk.js"
   },
   {
     "revision": "d373cc3e6d574d5c7775d707aa116512",
@@ -80,11 +80,11 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/mobile.46807fe6.png"
   },
   {
-    "revision": "37e08f3bc912aeaa927a",
+    "revision": "0d8f784b131aac7e4df7",
     "url": "/Jan-Elaaj-Website-REACT/static/css/2.b7fd2155.chunk.css"
   },
   {
-    "revision": "10ffad1fadf9fc141ed63d1d6f7161d8",
+    "revision": "6dbf2f2e593867141736c6c19fa6aa67",
     "url": "/Jan-Elaaj-Website-REACT/index.html"
   }
 ];
