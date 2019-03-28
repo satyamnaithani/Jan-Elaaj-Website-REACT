@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardImgOverlay, Carousel, CarouselItem, CarouselIndicators } from 'reactstrap';
 import MediaQuery from 'react-responsive';
 import { aboutStyles as styles } from "../assets/styles/aboutStyles";
-import about from "../assets/images/about.png";
+import about from "../assets/images/about.jpg";
 import carousel1 from "../assets/images/carousel1.jpeg";
 import carousel2 from "../assets/images/carousel2.jpeg";
 import carousel3 from "../assets/images/carousel3.jpeg";
