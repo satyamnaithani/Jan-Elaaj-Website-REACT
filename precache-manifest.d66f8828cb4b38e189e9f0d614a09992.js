@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "a40fcc40af556a24f046d6704df77570",
-    "url": "/Jan-Elaaj-Website-REACT/static/media/carousel7.a40fcc40.jpeg"
+    "revision": "221df12b47b4a0ff227a6dc7c9748661",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/carousel9.221df12b.jpeg"
   },
   {
-    "revision": "c5442597f1fc5848d6e3",
+    "revision": "f6aacdb56bc6a13943f5",
     "url": "/Jan-Elaaj-Website-REACT/static/css/main.78b81c35.chunk.css"
   },
   {
@@ -12,20 +12,24 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/js/runtime~main.a957ae22.js"
   },
   {
-    "revision": "c705dffa00e24b101ceb2facd696b89c",
-    "url": "/Jan-Elaaj-Website-REACT/static/media/logo.c705dffa.png"
+    "revision": "912ec66d7572ff821749319396470bde",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "f3d345ad4f1c0ef8b347",
-    "url": "/Jan-Elaaj-Website-REACT/static/js/2.fa55cfba.chunk.js"
-  },
-  {
-    "revision": "ef538aee3144b9b89bcc4040bc887062",
-    "url": "/Jan-Elaaj-Website-REACT/static/media/doc.ef538aee.jpg"
+    "revision": "e99b0d92ecec2f361775",
+    "url": "/Jan-Elaaj-Website-REACT/static/js/2.30bc7f88.chunk.js"
   },
   {
     "revision": "04795870c828bf1a957fdfeab8f88975",
     "url": "/Jan-Elaaj-Website-REACT/static/media/doc1.04795870.jpg"
+  },
+  {
+    "revision": "bde66512b5adfb587eb79e285a3f6373",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/doc2.bde66512.jpg"
+  },
+  {
+    "revision": "ef538aee3144b9b89bcc4040bc887062",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/doc.ef538aee.jpg"
   },
   {
     "revision": "3f3960150e02d0e4f4d2d79275129185",
@@ -56,24 +60,20 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/carousel6.daceda04.jpeg"
   },
   {
-    "revision": "c5442597f1fc5848d6e3",
-    "url": "/Jan-Elaaj-Website-REACT/static/js/main.675bae69.chunk.js"
+    "revision": "a40fcc40af556a24f046d6704df77570",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/carousel7.a40fcc40.jpeg"
   },
   {
     "revision": "42d10933e89949d5d3cdce4940ffbb7f",
     "url": "/Jan-Elaaj-Website-REACT/static/media/carousel8.42d10933.jpeg"
   },
   {
-    "revision": "221df12b47b4a0ff227a6dc7c9748661",
-    "url": "/Jan-Elaaj-Website-REACT/static/media/carousel9.221df12b.jpeg"
+    "revision": "f6aacdb56bc6a13943f5",
+    "url": "/Jan-Elaaj-Website-REACT/static/js/main.460ff069.chunk.js"
   },
   {
     "revision": "135c0257e1180d8f7c7da6e467c7f000",
     "url": "/Jan-Elaaj-Website-REACT/static/media/carousel10.135c0257.jpeg"
-  },
-  {
-    "revision": "bde66512b5adfb587eb79e285a3f6373",
-    "url": "/Jan-Elaaj-Website-REACT/static/media/doc2.bde66512.jpg"
   },
   {
     "revision": "d373cc3e6d574d5c7775d707aa116512",
@@ -108,11 +108,31 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/mobile.46807fe6.png"
   },
   {
-    "revision": "f3d345ad4f1c0ef8b347",
-    "url": "/Jan-Elaaj-Website-REACT/static/css/2.b7fd2155.chunk.css"
+    "revision": "c705dffa00e24b101ceb2facd696b89c",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/logo.c705dffa.png"
   },
   {
-    "revision": "2e1358635a338efee7096624f258c2c3",
+    "revision": "af7ae505a9eed503f8b8e6982036873e",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/fontawesome-webfont.af7ae505.woff2"
+  },
+  {
+    "revision": "fee66e712a8a08eef5805a46892932ad",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  {
+    "revision": "674f50d287a8c48dc19ba404d20fe713",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/fontawesome-webfont.674f50d2.eot"
+  },
+  {
+    "revision": "b06871f281fee6b241d60582ae9369b9",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/fontawesome-webfont.b06871f2.ttf"
+  },
+  {
+    "revision": "e99b0d92ecec2f361775",
+    "url": "/Jan-Elaaj-Website-REACT/static/css/2.30d3cf36.chunk.css"
+  },
+  {
+    "revision": "8ef0ed556a34a2e11509c6b4c38d6005",
     "url": "/Jan-Elaaj-Website-REACT/index.html"
   }
 ];
