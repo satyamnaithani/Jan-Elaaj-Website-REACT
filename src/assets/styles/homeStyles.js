@@ -50,7 +50,7 @@ export const homeStyles = {
 			color: 'white',
 			fontSize: 20,
 			marginTop: 30,
-			marginLeft: 60,
+			marginLeft: 60
 		},
 		input: {
 			paddingTop: 15,

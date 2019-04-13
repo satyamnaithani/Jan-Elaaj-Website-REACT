@@ -1,23 +1,23 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
-  // UncontrolledDropdown,
-  // DropdownToggle,
-  // DropdownMenu,
+	Collapse,
+	Navbar,
+	NavbarToggler,
+	NavbarBrand,
+	Nav,
+	NavItem,
+	NavLink
+	// UncontrolledDropdown,
+	// DropdownToggle,
+	// DropdownMenu,
 	// DropdownItem
- } from 'reactstrap';
-	
-	import logo from '../assets/images/logo.png';
- 
+} from 'reactstrap';
+
+import logo from '../../assets/images/logo.png';
+
 
 export default class Header extends Component {
-    constructor(props) {
+	constructor(props) {
 		super(props);
 		this.state = {
 			isNavOpen: false,
@@ -53,27 +53,33 @@ export default class Header extends Component {
 		this.toggleModal();
 		event.preventDefault();
 	}
-  render() {
-    return (
-     
-        <Navbar color="light" light expand="md" sticky={'top'} style={{ minHeight: 70 }}>
-          <NavbarBrand href="/" className="ml-5"><img src={logo} height="57.6px" width="134.4px" alt="Jan-Elaaj-Logo"/></NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto mr-4" navbar>
-              <NavItem>
-                <NavLink href="#home" className="nav-link" style={{marginLeft: 15,
-	marginRight: 15}} >Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#services" className="nav-link" style={{marginLeft: 15,
-	marginRight: 15}}>Services</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#about" className="nav-link" style={{marginLeft: 15,
-	marginRight: 15}} >About</NavLink>
-              </NavItem>
-              {/* <UncontrolledDropdown nav inNavbar>
+	render() {
+		return (
+
+			<Navbar color="light" light expand="md" sticky={'top'} style={{ minHeight: 70 }}>
+				<NavbarBrand href="/" className="ml-5"><img src={logo} height="57.6px" width="134.4px" alt="Jan-Elaaj-Logo" /></NavbarBrand>
+				<NavbarToggler onClick={this.toggle} />
+				<Collapse isOpen={this.state.isOpen} navbar>
+					<Nav className="ml-auto mr-4" navbar>
+						<NavItem>
+							<NavLink href="#home" className="nav-link" style={{
+								marginLeft: 15,
+								marginRight: 15
+							}} >{this.props.home}</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href="#services" className="nav-link" style={{
+								marginLeft: 15,
+								marginRight: 15
+							}}>{this.props.services}</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href="#about" className="nav-link" style={{
+								marginLeft: 15,
+								marginRight: 15
+							}} >{this.props.about}</NavLink>
+						</NavItem>
+						{/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret style={navItem}>
                   For Providers
                 </DropdownToggle>
@@ -94,12 +100,12 @@ export default class Header extends Component {
 								Signup
 							</NavLink>
 						</NavItem> */}
-            </Nav>
-          </Collapse>
-        </Navbar>
-      
-    );
-  }
+					</Nav>
+				</Collapse>
+			</Navbar>
+
+		);
+	}
 }
 // const navItem = {
 // 	marginLeft: 15,

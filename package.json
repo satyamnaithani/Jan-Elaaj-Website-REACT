@@ -5,11 +5,16 @@
   "private": true,
   "homepage": "https://satyamnaithani.github.io/Jan-Elaaj-Website-REACT",
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-infinite-scroll-component": "^4.5.2",
+    "react-infinite-scroller": "^1.2.4",
     "react-responsive": "^6.1.1",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "react-scrollable-anchor": "^0.6.1",
     "reactstrap": "^7.1.0"

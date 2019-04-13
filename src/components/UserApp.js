@@ -25,7 +25,6 @@ class About extends Component {
 								<h3 style={{ ...styles.heading }}> Jan Elaaj User App </h3>
 								<p style={styles.text}>Neighbourhood treatment is one click away</p>
 								<p style={styles.text}>Search and see the details of the healthcare services and providers based on location, speciality, ratings, experience, rates, discounts etc</p>
-
 								<p style={styles.text}>Make an educated decision and then book an appointment.</p>
 								<h3 style={{ ...styles.heading }}> Coming Soon !!</h3>
 								{/* <Form inline>
