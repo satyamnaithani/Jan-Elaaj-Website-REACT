@@ -24,7 +24,6 @@ class DoctorModal extends Component {
             modal: !prevState.modal
         }));
         this.fetchDocDetails()
-        console.log(this.state)
     }
 
     fetchDocDetails() {

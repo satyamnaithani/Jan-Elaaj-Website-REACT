@@ -7,7 +7,8 @@ import Services from './components/Services';
 import UserApp from './components/UserApp';
 import Header from './components/common/Header';
 //import Footer from './components/Footer';
-import FetchDoctors from './components/FetchDoctors';
+
+import SearchBox from './components/common/SearchBox'
 
 import { Switch, Route } from 'react-router';
 
@@ -17,7 +18,7 @@ class App extends Component {
     return (
       <BrowserRouter>
       <Switch>
-      <Route path='/doctors' component={FetchDoctors} />
+      <Route path='/doctors' component={SearchBox} />
       <div className="App">
           <Header home='Home' services= 'Services' about='About' />
           <ScrollableAnchor id={'home'}>

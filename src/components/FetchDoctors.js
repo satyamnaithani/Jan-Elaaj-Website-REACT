@@ -3,8 +3,6 @@ import { Progress } from 'reactstrap';
 import axios from 'axios';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import ApiData from './ApiData';
-import SearchBox from './common/SearchBox';
-import Header from './common/Header';
 
 class FetchDoctors extends Component {
 
@@ -24,11 +22,12 @@ class FetchDoctors extends Component {
             url: 'http://35.200.243.43:3000/getdoctorsbysearchlimit',
 
             data: {
-                cityname: 'new delhi',
-                dmrole: 'DOC',
-                localityname: null,
-                localitylat: 28.6139391,
-                localitylong: 77.2090212,
+                cityname: this.props.cityname,
+                dmrole: this.props.dmrole,
+                localityname: this.props.localityname,
+                localitylat: this.props.localitylat,
+                localitylong: this.props.localitylong,
+                //specialityid: this.props.specialityid,       {this is not working please update the backend}
                 specialityid: null,
                 queryoffset: this.state.queryoffset,
                 querylimit: this.state.querylimit,
@@ -48,7 +47,6 @@ class FetchDoctors extends Component {
     }
 
     componentDidMount() {
-
         this.fetchApi();
     }
 
@@ -65,11 +63,12 @@ class FetchDoctors extends Component {
             url: 'http://35.200.243.43:3000/getdoctorsbysearchlimit',
 
             data: {
-                cityname: 'new delhi',
-                dmrole: 'DOC',
-                localityname: null,
-                localitylat: 28.6139391,
-                localitylong: 77.2090212,
+                cityname: this.props.cityname,
+                dmrole: this.props.dmrole,
+                localityname: this.props.localityname,
+                localitylat: this.props.localitylat,
+                localitylong: this.props.localitylong,
+                // specialityid: this.props.specialityid,
                 specialityid: null,
                 queryoffset: this.state.queryoffset,
                 querylimit: this.state.querylimit,
@@ -87,19 +86,15 @@ class FetchDoctors extends Component {
     }
 
     render() {
-
         return (
             <div>
-                <Header/>
-                <SearchBox />
-                {/* <h2 align='center'>Doctors</h2> */}
                 <InfiniteScroll
                     dataLength={this.state.janData.length}
                     next={this.fetchNextData}
                     hasMore={true}
                     // loader={<div style={{textAlign: 'center'}}><Spinner style={{ width: '2rem', height: '2rem' }} /></div>}
-                //loader={<h3 align='center'>Loading...</h3>}
-                loader={<Progress animated value='100' />}
+                    //loader={<h3 align='center'>Loading...</h3>}
+                    loader={<Progress animated value='100' />}
                 >
 
                     <div className='container-fluid'>
