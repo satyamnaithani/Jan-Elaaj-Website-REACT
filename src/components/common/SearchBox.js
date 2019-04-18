@@ -14,7 +14,10 @@ class SearchBox extends Component {
 			cityValue: 'New Delhi',
 			locality: [],
 			localityValue: 'Jasola Vihar',
+			localitylat:'28.5473',
+			localitylong: '77.2891',
 			serviceValue: 'DOC',
+			specialityid: '9',
 			speciality: [],
 			isLoadingCity: true,
 			isLoadingLocality: true,
@@ -70,13 +73,36 @@ class SearchBox extends Component {
 
 				data: { cityname: this.state.cityValue }
 			})
-				.then(response => this.setState({ locality: response.data.info, isLoadingLocality: false }))
+				.then(response => this.setState({ locality: response.data.info, isLoadingLocality: false, localityValue: response.data.info[0].llocalityname }, () => {
+					this.state.locality.forEach((locality) => {
+						if (this.state.localityValue === locality.llocalityname) {
+							this.setState({
+								localitylat: locality.llocality_lat,
+								localitylong: locality.llocality_long
+							})
+						}
+		
+					})
+				}))
+
 				.catch(error => console.log(error))
 		});
 	}
 
 	handleChangeLocality(event) {
-		this.setState({ localityValue: event.target.value })
+		this.setState({ localityValue: event.target.value }, function () {
+			this.state.locality.forEach((locality) => {
+				if (this.state.localityValue === locality.llocalityname) {
+					this.setState({
+						localitylat: locality.llocality_lat,
+						localitylong: locality.llocality_long
+					})
+				}
+
+			})
+
+		}
+		)
 
 	}
 
@@ -89,7 +115,14 @@ class SearchBox extends Component {
 
 				data: { Role: this.state.serviceValue }
 			})
-				.then(response => this.setState({ speciality: response.data.sparr, isLoadingSpeciality: false }))
+				.then(response => this.setState({ speciality: response.data.sparr, isLoadingSpeciality: false, specialityValue: response.data.sparr[0].name }, ()=> {
+					this.state.speciality.forEach((speciality) => {
+						if (this.state.specialityValue === speciality.name) {
+							this.setState({specialityid: speciality.id})
+						}
+		
+					})	
+				}))
 				.catch(error => console.log(error))
 		})
 	}
@@ -97,10 +130,17 @@ class SearchBox extends Component {
 	handleChangeSpeciality(event) {
 		this.setState({ specialityValue: event.target.value }, function () {
 
-			console.log(this.state)
+			this.state.speciality.forEach((speciality) => {
+				if (this.state.specialityValue === speciality.name) {
+					this.setState({specialityid: speciality.id})
+				}
+
+			})
+
 		})
 	}
 	render() {
+		console.log(this.state)
 		return (
 			
 			<Card style={{ backgroundColor: '#2e69c9' }}>
