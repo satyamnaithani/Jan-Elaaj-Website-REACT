@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { homeStyles as styles } from "../../assets/styles/homeStyles";
 import '../../assets/styles/globalStyles.scss';
 import axios from 'axios';
-import Header from './Header';
 import FetchDoctors from '../FetchDoctors';
 
 class SearchBox extends Component {
@@ -33,7 +32,11 @@ class SearchBox extends Component {
 		this.searchMethod = this.searchMethod.bind(this);
 	}
 	componentDidMount() {
-		
+
+		if (this.props.doctorDataLoad === false) {
+			this.setState({ doctorDataLoad: false })
+		}
+
 		axios({
 			method: 'POST',
 
@@ -52,7 +55,6 @@ class SearchBox extends Component {
 					.catch(error => console.log(error))
 			}))
 			.then(
-
 				this.setState({ serviceValue: 'DOC' }, function () {
 					axios({
 						method: 'POST',
@@ -89,14 +91,14 @@ class SearchBox extends Component {
 
 					})
 				}))
-				.then(this.setState({doctorDataLoad: true}))
+				.then(this.setState({ doctorDataLoad: true }))
 
 				.catch(error => console.log(error))
 		});
 	}
 
 	handleChangeLocality(event) {
-		this.setState({doctorDataLoad: true})
+		this.setState({ doctorDataLoad: true })
 		this.setState({ localityValue: event.target.value }, function () {
 			this.state.locality.forEach((locality) => {
 				if (this.state.localityValue === locality.llocalityname) {
@@ -114,7 +116,7 @@ class SearchBox extends Component {
 	}
 
 	handleChangeService(event) {
-		this.setState({doctorDataLoad: true})
+		this.setState({ doctorDataLoad: true })
 		this.setState({ serviceValue: event.target.value }, function () {
 			axios({
 				method: 'POST',
@@ -136,7 +138,7 @@ class SearchBox extends Component {
 	}
 
 	handleChangeSpeciality(event) {
-		this.setState({doctorDataLoad: true})
+		this.setState({ doctorDataLoad: true })
 		this.setState({ specialityValue: event.target.value }, function () {
 
 			this.state.speciality.forEach((speciality) => {
@@ -155,7 +157,6 @@ class SearchBox extends Component {
 	render() {
 		return (
 			<div>
-				<Header />
 				<Card style={{ backgroundColor: '#2e69c9' }}>
 					<CardTitle style={styles.card2.title} className="normal"> Search services near you </CardTitle>
 					<CardBody>
@@ -202,7 +203,19 @@ class SearchBox extends Component {
 									</Input>
 								</Col>
 
-								<Col lg={2}> <Link to="/doctors"><Button onClick={this.searchMethod} style={styles.card2.button} size="lg" className="mt-4 mt-lg-auto"> Search </Button></Link> </Col>
+								<Col lg={2}> <Link to={{
+									pathname: '/doctors',
+									state: {
+										cityname: this.state.cityValue,
+										dmrole: this.state.serviceValue,
+										localityname: this.state.localityValue,
+										localitylat: this.state.localitylat,
+										localitylong: this.state.localitylong,
+										specialityid: this.state.specialityid,
+										doctorDataLoad: false
+									}
+								}}>
+									<Button onClick={this.searchMethod} style={styles.card2.button} size="lg" className="mt-4 mt-lg-auto"> Search </Button></Link> </Col>
 							</FormGroup>
 						</Form>
 					</CardBody>
@@ -212,12 +225,12 @@ class SearchBox extends Component {
 						// <h1 align='center' style={{ marginTop: '20px' }}></h1>
 						null
 						:
-						<FetchDoctors cityname={this.state.cityValue}
-							dmrole={this.state.serviceValue}
-							localityname={this.state.localityValue}
-							localitylat={this.state.localitylat}
-							localitylong={this.state.localitylong}
-							specialityid={this.state.specialityid}
+						<FetchDoctors cityname={this.props.cityname}
+							dmrole={this.props.dmrole}
+							localityname={this.props.localityname}
+							localitylat={this.props.localitylat}
+							localitylong={this.props.localitylong}
+							specialityid={this.props.specialityid}
 						/>
 				}
 			</div>

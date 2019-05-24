@@ -8,7 +8,7 @@ import UserApp from './components/UserApp';
 import Header from './components/common/Header';
 //import Footer from './components/Footer';
 
-import SearchBox from './components/common/SearchBox'
+import Doctors from './components/Doctors'
 
 import { Switch, Route } from 'react-router';
 
@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <BrowserRouter>
       <Switch>
-      <Route path='/doctors' component={SearchBox} />
+      <Route path='/doctors' component={Doctors} />
       <div className="App">
           <Header home='Home' services= 'Services' about='About' />
           <ScrollableAnchor id={'home'}>

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardTitle, CardText, CardBody, Button } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Card, CardImg, CardImgOverlay, CardTitle, CardText} from 'reactstrap';
 import MediaQuery from 'react-responsive';
 import doc from '../assets/images/doc.jpg';
 import doc1 from '../assets/images/doc1.jpg';
 import { homeStyles as styles } from "../assets/styles/homeStyles";
 import '../assets/styles/globalStyles.scss';
+import SearchBox from './common/SearchBox';
 // import SearchBox from './common/SearchBox';
 
 
@@ -79,7 +79,7 @@ class Home extends Component {
 		return (
 			<div>
 				<MainScreen />
-				<Card style={{ backgroundColor: '#2e69c9' }}>
+				{/* <Card style={{ backgroundColor: '#2e69c9' }}>
 					<CardTitle style={{
 						color: 'white',
 						fontSize: 20,
@@ -88,7 +88,8 @@ class Home extends Component {
 					<CardBody>
 						<Link to="/doctors" style={{ textDecoration: 'none' }}><Button onClick={this.searchMethod} style={styles.card2.button} size="lg" block className="mt-4 mt-lg-auto"><div styles={{ textDecoration: 'none' }}>Search</div></Button></Link>
 					</CardBody>
-				</Card>
+				</Card> */}
+				<SearchBox />
 			</div>
 		);
 	}

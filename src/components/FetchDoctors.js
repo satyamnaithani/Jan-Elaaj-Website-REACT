@@ -12,7 +12,8 @@ class FetchDoctors extends Component {
             janData: [],
             queryoffset: 0,
             querylimit: 12,
-            hasMore: true
+            hasMore: true,
+            status: ''
         }
     }
     fetchApi() {
@@ -39,7 +40,11 @@ class FetchDoctors extends Component {
             config: { headers: { 'Content-Type': 'application/json' } }
         })
 
-            .then(response => this.setState({ janData: response.data.info }))
+            .then(response => this.setState({ janData: response.data.info, status: response.data.status }, function () {
+                if( this.state.status === " NO RECORDS Retrieved") {
+                    this.setState({ hasMore: false })
+                  }
+            }))
             .catch(function (response) {
                 console.log(response);
             });
@@ -79,7 +84,11 @@ class FetchDoctors extends Component {
             },
             config: { headers: { 'Content-Type': 'application/json' } }
         })
-            .then(response => this.setState({ janData: this.state.janData.concat(response.data.info) }))
+            .then(response => this.setState({ janData: this.state.janData.concat(response.data.info) }, function () {
+                if( this.state.status === " NO RECORDS Retrieved") {
+                    this.setState({ hasMore: false })
+                  }
+            }))
             .catch(function (response) {
                 console.log(response);
             });
@@ -89,24 +98,18 @@ class FetchDoctors extends Component {
         return (
             <div>
                 <InfiniteScroll
-                    dataLength={this.state.janData.length}
-                    next={this.fetchNextData}
-                    hasMore={this.state.hasMore}
-                    // loader={<div style={{textAlign: 'center'}}><Spinner style={{ width: '2rem', height: '2rem' }} /></div>}
-                    //loader={<h3 align='center'>Loading...</h3>}
-                    loader={<Progress animated value='100' />}
+                    dataLength= {this.state.janData.length}
+                    next= {this.fetchNextData}
+                    hasMore= {this.state.hasMore}
+                    loader= {<Progress animated value='100' />}
                 >
-
                     <div className='container-fluid'>
                         <div className='row'>
-                            <h3 className="heading col-12 text-center mt-5 mb-5" style={{ letterSpacing: 2, fontSize: 40, fontWeight: 500 }}>Doctors</h3>
+                            <h3 className="heading col-12 text-center mt-5 mb-5" style={{ letterSpacing: 2, fontSize: 40, fontWeight: 500 }}>{this.state.hasMore ? 'Doctors' : 'No Data Available' }</h3>
                         </div>
                         <div className="row ml-4 mr-4 d-flex flex-row justify-content-around">
                             {
                                 this.state.janData.map((data, index) => {
-                                    if(data.ldoctorid == null) {
-                                        this.setState({ hasMore: false})
-                                    }
                                    return <ApiData key={index} info={data} />
                                 }     
                                 )
@@ -114,7 +117,6 @@ class FetchDoctors extends Component {
                         </div>
                     </div>
                 </InfiniteScroll>
-
             </div>
         );
     }
