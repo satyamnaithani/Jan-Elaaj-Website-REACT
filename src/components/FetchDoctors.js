@@ -11,10 +11,10 @@ class FetchDoctors extends Component {
         this.state = {
             janData: [],
             queryoffset: 0,
-            querylimit: 12
+            querylimit: 12,
+            hasMore: true
         }
     }
-
     fetchApi() {
         axios({
             method: 'POST',
@@ -68,7 +68,7 @@ class FetchDoctors extends Component {
                 localityname: this.props.localityname,
                 localitylat: this.props.localitylat,
                 localitylong: this.props.localitylong,
-                // specialityid: this.props.specialityid,
+                //specialityid: this.props.specialityid,
                 specialityid: null,
                 queryoffset: this.state.queryoffset,
                 querylimit: this.state.querylimit,
@@ -91,7 +91,7 @@ class FetchDoctors extends Component {
                 <InfiniteScroll
                     dataLength={this.state.janData.length}
                     next={this.fetchNextData}
-                    hasMore={true}
+                    hasMore={this.state.hasMore}
                     // loader={<div style={{textAlign: 'center'}}><Spinner style={{ width: '2rem', height: '2rem' }} /></div>}
                     //loader={<h3 align='center'>Loading...</h3>}
                     loader={<Progress animated value='100' />}
@@ -103,9 +103,14 @@ class FetchDoctors extends Component {
                         </div>
                         <div className="row ml-4 mr-4 d-flex flex-row justify-content-around">
                             {
-                                this.state.janData.map((data, index) => (
-                                    <ApiData key={index} info={data} />
-                                ))}
+                                this.state.janData.map((data, index) => {
+                                    if(data.ldoctorid == null) {
+                                        this.setState({ hasMore: false})
+                                    }
+                                   return <ApiData key={index} info={data} />
+                                }     
+                                )
+                            }
                         </div>
                     </div>
                 </InfiniteScroll>
