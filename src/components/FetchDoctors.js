@@ -20,7 +20,7 @@ class FetchDoctors extends Component {
         axios({
             method: 'POST',
 
-            url: 'http://35.200.243.43:3000/getdoctorsbysearchlimit',
+            url: 'https://dev-node.janelaaj.com:3443/getdoctorsbysearchlimit',
 
             data: {
                 cityname: this.props.cityname,
@@ -45,6 +45,7 @@ class FetchDoctors extends Component {
                     this.setState({ hasMore: false })
                   }
             }))
+            // .then(response => console.log(response))
             .catch(function (response) {
                 console.log(response);
             });
@@ -65,7 +66,7 @@ class FetchDoctors extends Component {
         axios({
             method: 'POST',
 
-            url: 'http://35.200.243.43:3000/getdoctorsbysearchlimit',
+            url: 'https://dev-node.janelaaj.com:3443/getdoctorsbysearchlimit',
 
             data: {
                 cityname: this.props.cityname,

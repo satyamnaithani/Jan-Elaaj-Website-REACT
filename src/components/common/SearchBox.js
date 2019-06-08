@@ -40,14 +40,14 @@ class SearchBox extends Component {
 		axios({
 			method: 'POST',
 
-			url: 'http://35.200.243.43:3000/getcitylist'
+			url: 'https://dev-node.janelaaj.com:3443/getcitylist'
 		})
 			.then(response => this.setState({ city: response.data.info, isLoadingCity: false }))
 			.then(this.setState({ cityValue: 'New Delhi' }, function () {
 				axios({
 					method: 'POST',
 
-					url: 'http://35.200.243.43:3000/getlocality',
+					url: 'https://dev-node.janelaaj.com:3443/getlocality',
 
 					data: { cityname: this.state.cityValue }
 				})
@@ -59,7 +59,7 @@ class SearchBox extends Component {
 					axios({
 						method: 'POST',
 
-						url: 'http://35.200.243.43:3000/getspeciality',
+						url: 'https://dev-node.janelaaj.com:3443/getspeciality',
 
 						data: { Role: this.state.serviceValue }
 					})
@@ -76,7 +76,7 @@ class SearchBox extends Component {
 			axios({
 				method: 'POST',
 
-				url: 'http://35.200.243.43:3000/getlocality',
+				url: 'https://dev-node.janelaaj.com:3443/getlocality',
 
 				data: { cityname: this.state.cityValue }
 			})
@@ -121,7 +121,7 @@ class SearchBox extends Component {
 			axios({
 				method: 'POST',
 
-				url: 'http://35.200.243.43:3000/getspeciality',
+				url: 'https://dev-node.janelaaj.com:3443/getspeciality',
 
 				data: { Role: this.state.serviceValue }
 			})

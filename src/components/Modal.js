@@ -29,11 +29,11 @@ class DoctorModal extends Component {
     fetchDocDetails() {
         if (!this.state.modal) {
 
-            var id = this.props.dlmId;
+            var id = this.props.docDetails.ldlm_id;
             axios({
                 method: 'POST',
 
-                url: 'http://35.200.243.43:3000/getdoctordetails',
+                url: 'https://dev-node.janelaaj.com:3443/getdoctordetails',
 
                 data: {
                     dlmid: id
@@ -58,8 +58,8 @@ class DoctorModal extends Component {
                                 <Media object src={doc1} style={{ maxHeight: 250, maxWidth: '100%', borderRadius: '50%' }} alt='Doctor Info' />
                                 <hr style={{ textAlign: 'center', borderTop: '1px solid #f8f8f8', borderBottom: '1px solid rgba(0, 0, 0, 0.1)', width: '300px' }} />
                                 <div style={{ marginTop: '20' }}>
-                                    <h5 align='center' style={{ letterSpacing: 2, fontWeight: 500 }}>Dr. Rahul Mathur</h5>
-                                    <h5 align='center' style={{ letterSpacing: 2, fontWeight: 400 }}>Neurologist</h5>
+                                    <h5 align='center' style={{ letterSpacing: 2, fontWeight: 500 }}>{this.props.docDetails.ldoctorname}</h5>
+                                    <h5 align='center' style={{ letterSpacing: 2, fontWeight: 400 }}>{this.props.docDetails.lspecialityname}</h5>
                                 </div>
                                 <div className='fa-2x' style={{ color: '#f4e542' }}>
                                     <i className="fa fa-star" aria-hidden="true"></i> {' '}
@@ -80,16 +80,17 @@ class DoctorModal extends Component {
                             </div>
                             <div className='col-lg-4 col-md-12 col-sm-12'>
                                 <h5 style={styles.textHeading}>About</h5>
-                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>{this.props.docDetails.ldoctorintro}</p>
                                 <br />
                                 <h5 style={styles.textHeading}>Experience</h5>
-                                <p>2 years at xyz clinic Gurugram</p>
-                                <p>3 years at Gramin clinic</p>
+                                <p>{this.props.docDetails.lexperience} years</p>
                                 <br />
                                 <h5 style={styles.textHeading}>Address</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                                <p>{this.props.docDetails.laddressline1}</p>
+                                <p>{this.props.docDetails.laddressline2}</p>
+                                <p>{this.props.docDetails.lcity}</p>
                                 <br />
-                                <h5 style={styles.textHeading}>Contact</h5>{'  '} <p>09453006121</p>
+                                <h5 style={styles.textHeading}>Contact</h5>{'  '} <p>{this.props.docDetails.ldoctorphone}</p>
                             </div>
                             <div className='col-lg-4 col-md-12 col-sm-12'>
                                 <Table borderless>
