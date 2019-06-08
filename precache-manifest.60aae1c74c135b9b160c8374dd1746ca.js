@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/carousel9.221df12b.jpeg"
   },
   {
-    "revision": "7f4084f8a5ed4cf2c255",
-    "url": "/Jan-Elaaj-Website-REACT/static/css/main.78b81c35.chunk.css"
+    "revision": "16c5afa35e8f03ea815c",
+    "url": "/Jan-Elaaj-Website-REACT/static/css/main.3066b5a4.chunk.css"
   },
   {
     "revision": "8f357b2b65b98200a713",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "3dec280031080125e805",
-    "url": "/Jan-Elaaj-Website-REACT/static/js/2.f782db88.chunk.js"
+    "revision": "e3a63d360a1effe6cc9a",
+    "url": "/Jan-Elaaj-Website-REACT/static/js/2.8b2d98ed.chunk.js"
   },
   {
     "revision": "04795870c828bf1a957fdfeab8f88975",
@@ -68,8 +68,8 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/carousel8.42d10933.jpeg"
   },
   {
-    "revision": "7f4084f8a5ed4cf2c255",
-    "url": "/Jan-Elaaj-Website-REACT/static/js/main.36baf430.chunk.js"
+    "revision": "16c5afa35e8f03ea815c",
+    "url": "/Jan-Elaaj-Website-REACT/static/js/main.982d7262.chunk.js"
   },
   {
     "revision": "135c0257e1180d8f7c7da6e467c7f000",
@@ -120,19 +120,19 @@ self.__precacheManifest = [
     "url": "/Jan-Elaaj-Website-REACT/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "b06871f281fee6b241d60582ae9369b9",
-    "url": "/Jan-Elaaj-Website-REACT/static/media/fontawesome-webfont.b06871f2.ttf"
-  },
-  {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
     "url": "/Jan-Elaaj-Website-REACT/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
-    "revision": "3dec280031080125e805",
-    "url": "/Jan-Elaaj-Website-REACT/static/css/2.30d3cf36.chunk.css"
+    "revision": "b06871f281fee6b241d60582ae9369b9",
+    "url": "/Jan-Elaaj-Website-REACT/static/media/fontawesome-webfont.b06871f2.ttf"
   },
   {
-    "revision": "872be49f84d6d38b5eadac9c5512b5c9",
+    "revision": "e3a63d360a1effe6cc9a",
+    "url": "/Jan-Elaaj-Website-REACT/static/css/2.fd908b1c.chunk.css"
+  },
+  {
+    "revision": "ce16e385752559625bfcbd03c5d175e4",
     "url": "/Jan-Elaaj-Website-REACT/index.html"
   }
 ];
