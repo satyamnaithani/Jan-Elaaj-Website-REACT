@@ -28,8 +28,7 @@ class FetchDoctors extends Component {
                 localityname: this.props.localityname,
                 localitylat: this.props.localitylat,
                 localitylong: this.props.localitylong,
-                //specialityid: this.props.specialityid,       {this is not working please update the backend}
-                specialityid: null,
+                specialityid: this.props.specialityid, 
                 queryoffset: this.state.queryoffset,
                 querylimit: this.state.querylimit,
                 sortid: 0,
