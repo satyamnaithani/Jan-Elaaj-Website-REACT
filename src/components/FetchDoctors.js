@@ -13,6 +13,7 @@ class FetchDoctors extends Component {
             queryoffset: 0,
             querylimit: 12,
             hasMore: true,
+            noMoreData: false,
             status: ''
         }
     }
@@ -43,8 +44,11 @@ class FetchDoctors extends Component {
                 if( this.state.status === " NO RECORDS Retrieved") {
                     this.setState({ hasMore: false })
                   }
+                  if( response.data.info.length < this.state.querylimit) {
+                      this.setState({noMoreData: true, hasMore: false})
+                  }
             }))
-            // .then(response => console.log(response))
+            //  .then(response => console.log(response))
             .catch(function (response) {
                 console.log(response);
             });
@@ -87,6 +91,9 @@ class FetchDoctors extends Component {
                 if( this.state.status === " NO RECORDS Retrieved") {
                     this.setState({ hasMore: false })
                   }
+                  if( response.data.info.length < this.state.querylimit) {
+                    this.setState({noMoreData: true, hasMore: false})
+                }
             }))
             .catch(function (response) {
                 console.log(response);
@@ -94,6 +101,7 @@ class FetchDoctors extends Component {
     }
 
     render() {
+        console.log(this.state.noMoreData)
         return (
             <div>
                 <InfiniteScroll
@@ -104,7 +112,7 @@ class FetchDoctors extends Component {
                 >
                     <div className='container-fluid'>
                         <div className='row'>
-                            <h3 className="heading col-12 text-center mt-5 mb-5" style={{ letterSpacing: 2, fontSize: 40, fontWeight: 500 }}>{this.state.hasMore ? 'Doctors' : 'No Data Available' }</h3>
+                            <h3 className="heading col-12 text-center mt-5 mb-5" style={{ letterSpacing: 2, fontSize: 40, fontWeight: 500 }}>{( this.state.hasMore)? 'Doctors' : ' ' }</h3>
                         </div>
                         <div className="row ml-4 mr-4 d-flex flex-row justify-content-around">
                             {
@@ -114,6 +122,7 @@ class FetchDoctors extends Component {
                                 )
                             }
                         </div>
+                        <h2 className="heading col-12 text-center mt-5 mb-5" style={{ letterSpacing: 2, fontSize: 40, fontWeight: 500 }}>{( this.state.hasMore)? '' : 'No More Data Available' }</h2>
                     </div>
                 </InfiniteScroll>
             </div>
