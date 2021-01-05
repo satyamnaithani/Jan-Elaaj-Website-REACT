@@ -5,7 +5,7 @@
   "private": true,
   "homepage": "https://satyamnaithani.github.io/Jan-Elaaj-Website-REACT",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.11.0",
